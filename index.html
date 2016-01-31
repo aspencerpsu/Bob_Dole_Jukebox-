@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>A Jukebox For The Listener</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" media = "all and (min-width: 400px)">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+		  <h1>Jukebox Jointz<br><small>Juking On Em!</small></h1>
+		</div>
+		<div class = "row_1">
+			<div class = "sec_1">
+				<h3>Cold Dead</h3>
+				<img src="http://2ykov18qyj81ii56523ib0ue.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/flylo-dead-03.jpg" width="300" height="402">
+				<audio id = "9th" src = "cold_dead.mp3" controls = "false" style="display:none"></audio>
+				<button id="load" onclick="jukebox.load(songs[0])" style="width:200px; height:25px"><span class="glyphicon glyphicon-download-alt">Load</span></button>
+			</div>
+			<div class = "sec_1">
+				<h3>Dead Man's Tetris</h3>
+				<img src="http://2ykov18qyj81ii56523ib0ue.wpengine.netdna-cdn.com/wp-content/uploads/2014/08/flylo-dead-06.jpg">
+				<audio id = "beethoven" src = "dead_man.mp3" controls= "false" style="display:none"></audio>
+				<button id="load" onclick="jukebox.load(songs[1])" style="width: 200px; height: 25px"><span class="glyphicon glyphicon-download-alt">Load</span></button>
+			</div>
+			<div class="sec_1">
+				<h3>Turkey Dog Coma</h3>
+				<img src="https://images.rapgenius.com/88b687385c8630dac028ab79d8e8167a.500x662x1.jpg" width="304" height="402">
+				<audio id = "flying" src = "Turkey_Dog_Coma.mp3" controls = "false"style="display:none"></audio>
+				<button id="load" onclick="jukebox.load(songs[2])"style="width: 200px; height: 25px"><span class="glyphicon glyphicon-download-alt">Load</span></button>
+			</div>
+				
+		</div>
+				<br>
+				<br>
+				<br>
+		<div id="song_addition">
+			<h2>Add more songs to the catalog!</h2>
+			<form class="adding" id="add_songs">
+				<label>Song Title</label>
+				<input type="text" placeholder="name of the song" id="title" require>
+				<label>Song Url</label>
+				<input type="text" placeholder="Note: Only MP3" require id="audiosrc">
+				<label>Avatar For Song</label>
+				<select id="thumb">
+					<option label=" "></option>
+					<option value="http://www.tailsinc.com/wp-content/uploads/2012/10/doggie.jpeg">Doggie Pic</option>
+					<option value="http://i.imgur.com/XtHuywV.jpg">Kitty Pic</option>
+					<option value="http://assets.nydailynews.com/polopoly_fs/1.1276951!/img/httpImage/image.jpg_gen/derivatives/gallery_1200/blobfish.jpg">Adorable Blobfish</option>
+				</select>
+				<label>Select a unique picture avatar</label>
+				<input type="url" placeholder="Give a unique image" type="text" id="unique">
+				<button onclick="jukebox.addmoresongs()">Jukify</button>
+			</form>
+			
+		</div>
+	
+		<div class="row_2">
+			<h1>This Is A Jukebox For Old Times Sake</h1>
+			<div class="image_con" id = "juke">
+				<button id="play" onclick="jukebox.play()"><span class="glyphicons glyphicons-play">Play</span></button>
+				<button id="stop" onclick="jukebox.stop()"><span class="glyphicons glyphicons-stop">Stop</span></button>
+			</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
